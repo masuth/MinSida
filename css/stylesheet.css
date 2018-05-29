@@ -1,0 +1,392 @@
+body {
+    font-family: Arial;
+    margin: 10px;
+    background-color: #d3d3d3;
+}
+
+#wrapper {
+    display:grid;
+    height:100vh;
+    width:97vw;
+    grid-auto-columns: minmax(100px, 1fr);
+    grid-template-areas:
+    'hd hd hd hd hd'
+    'nv nv nv nv nv'
+    'scp scp scp scp scp'
+    'sct sct scv scv scv'
+    'artone arttwo artthree artfour artfive'
+    'ft ft ft ft ft';
+}
+
+#kontakt {
+    display:grid;
+    height:100vh;
+    width:97vw;
+    grid-auto-columns: 25%;
+    grid-template-areas:
+    'hd hd hd hd'
+    'nv nv nv nv'
+    'sc scp scm scc'
+    'ft ft ft ft';
+}
+
+#om-mig {
+    display:grid;
+    height:100vh;
+    width:97vw;
+    grid-template-areas:
+    'hd hd hd hd hd'
+    'nv nv nv nv nv'
+    'sca sca scb scb scb'
+    'vid vid vid vid vid'
+    'ft ft ft ft ft';
+}
+
+#portfolio {
+    display:grid;
+    height:100vh;
+    width:97vw;
+    grid-template-areas:
+    'hd'
+    'nv'
+    'sc'
+    'ft';
+}
+
+/**/
+header {
+    grid-area: hd;
+    display: grid;
+    background-color: white;
+    height: 150px;
+}
+header a {
+    justify-self: center;
+}
+header a img {
+    height:120px;
+    margin-top:10px;
+}
+
+/*Använder en flexbox för navigationen*/
+nav {
+    display: flex;
+    background-color: #ffffff;
+    grid-area: nv;
+    color: #ffffff;
+    margin-bottom: 10px;
+    height: 100px;
+    justify-content: center;
+}
+nav > a {
+    flex-wrap: wrap;
+    align-self: center;
+    letter-spacing: 5px;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    margin-right:40px;
+}
+nav > a > img {
+    font-size: 16px;
+    color: #000000;
+}
+nav > a:hover {
+    color: #dc143c;
+}
+/********INDEX********/
+
+/*Stor bild startsida*/
+.banner {
+    grid-area: scp;
+    display: grid;
+    position: relative;
+}
+.banner img {
+    width: 100%;
+}
+
+/*Textblock i stor bild*/
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    background-color: hsla(348, 99%, 61%, 0.637);
+    display: block;
+    color: #ffffff;
+    padding-left: 300px;
+    padding-right: 50px;
+}
+
+/*Knapp index*/
+.knapp {
+    background-color: #dc143c;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.22);
+    width: 200px;
+    margin: 0px auto 20px;
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+}
+.knapp > a {
+    color: #FFFFFF;
+}
+.knapp:hover {
+    opacity: 0.6;
+}
+
+/*Section vänster index*/
+.textarea {
+    margin-top: 10px;
+    grid-area: sct;
+    background-color: #ffffff;
+    display: grid;
+    height: 350px;
+    padding-bottom: 20px;
+}
+
+/*Section höger*/
+.rubrik {
+    margin-top: 10px;
+    grid-area: scv;
+    background-color: #524c4c;
+    height: 350px;
+    padding-bottom: 20px;
+}
+
+/*Två bilder på rad med GRID*/
+.box-right {
+    grid-area: scv;
+    display: grid;
+    width: 100%;
+}
+.bild1 {
+    grid-column: 1 / 2.5;
+    grid-row: 3;
+    justify-self: center;
+}
+.bild2 {
+    grid-column: 2.5 / 4;
+    grid-row: 3;
+    justify-self: center;
+}
+/* Två bilder på rad med FLEX*/
+/* .box-right {
+    grid-area: scv;
+    display: flex;
+    width: 100%;
+}
+.bild1 {
+    flex-wrap: wrap;
+    justify-self: center;
+    align-self: center;
+    margin: 40px auto 0;
+}
+.bild2 {
+    flex-wrap: wrap;
+    justify-self: center;
+    align-self: center;
+    margin: 40px auto 0;
+} */
+
+/*Fem bilder på rad innan footer*/
+.container-down {
+    display: inline-block;
+}
+.container-down > article > img {
+    padding: 10px 0px;
+    max-inline-size: 100%;
+    opacity: 0.7;
+}
+.container-down > article > img:hover {
+    opacity: 1;
+}
+
+/*Image artiklarna samlade*/
+.article-one {
+    grid-area: artone;
+}
+.article-two {
+    grid-area: arttwo;
+}
+.article-three {
+    grid-area: artthree;
+}
+.article-four {
+    grid-area: artfour;
+}
+.article-five {
+    grid-area: artfive;
+}
+
+/*Text*/
+h2 {
+    text-align: center;
+    color: #dc143c;
+}
+.h2-white {
+    text-align: center;
+    color: #ffffff;
+}
+h3 {
+    text-align: right;
+    color: #ffffff;
+}
+.p-starttext {
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+}
+.p-text {
+    padding: 20px;
+    color: #000000;
+}
+.p-white {
+    text-align: center;
+    color: #ffffff;
+}
+.p-small {
+    text-align: center;
+    color: #808080;
+    font-size: 10px;
+    margin-top:130px;
+}
+
+/*FOOTER*/
+footer {
+    background-color: white;
+    grid-area: ft;
+    height: 250px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 100px;
+}
+/*CSS3*/
+footer, header, .textarea, .box, .knapp {
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.22);
+}
+
+/********KONTAKT********/
+
+/*Bakgrundsbild*/
+.box2 {
+    grid-area: sc;
+    display: grid;
+    grid-column: 1 / 5;
+    height: 400px;
+    margin-bottom: 10px;
+}
+.box2 > img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Ikoner*/
+.phone {
+    grid-area: scp;
+    display: grid;
+    align-self: center;
+}
+.mail {
+    grid-area: scm;
+    display: grid;
+    align-self: center;
+}
+.phone > img {
+    width: 200px;;
+    justify-self: center;
+}
+.mail > img {
+    width: 200px;
+    justify-self: center;
+}
+
+/********OM MIG********/
+
+/*Självporträtt*/
+.min-bild {
+    display:grid;
+    grid-area: sca;
+    max-width: 50%;
+    justify-self: center;
+}
+.min-bild img {
+    width: 100%;
+    margin: 10px 0 20px 0;
+    border-color: #dc143c;
+    border-style: groove;
+    border-width: 10px;
+    align-self: center;
+}
+
+/*Bakgrundsbild*/
+.box3 {
+    grid-area: sca;
+    display: grid;
+    grid-column: 1 / 6;
+    grid-row: 3 / 5;
+    margin-bottom: 10px;
+}
+.box3 > img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Text article höger*/
+.box-text {
+    grid-area: scb;
+    background-color: #ffffff;
+    display: grid;
+    height: auto; 
+    padding: 0 20px 0 20px;
+    margin: 10px 20px 20px 0;
+}
+
+/*Knapp på Om mig-sida*/
+.knapp2 {
+    background-color: #dc143c;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-color: rgba(0, 0, 0, 0.22);
+    width: 200px;
+    margin: 0px auto 20px;
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+}
+.knapp2 > a {
+    color: #FFFFFF;
+}
+.knapp2:hover {
+    opacity: 0.6;
+}
+
+/*Video*/
+video {
+    grid-area: vid;
+    width: 50%;
+    justify-self: center;
+    margin: 30px;
+}
+
+
+/********PORTFOLIO********/
+
+/*En grid-layout för foto*/
+.grid-photo { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 10px;
+}
+.grid-photo img {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;
+}
